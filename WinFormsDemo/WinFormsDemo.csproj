@@ -73,8 +73,38 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MessageHelper.cs" />
+    <Compile Include="MyTabControl\Button.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyTabControl\Button.Designer.cs">
+      <DependentUpon>Button.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyTabControl\MyTabNav.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyTabControl\MyTabCloseButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyTabControl\MyTabControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyTabControl\MyTabNavItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyTabControl\MyTabPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyTabControl\MyTabPageBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TabControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabControlForm.Designer.cs">
+      <DependentUpon>TabControlForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Worker.cs" />
     <EmbeddedResource Include="ChartForm.resx">
       <DependentUpon>ChartForm.cs</DependentUpon>
@@ -88,6 +118,9 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyTabControl\MyTabCloseButton.resx">
+      <DependentUpon>MyTabCloseButton.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -97,6 +130,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TabControlForm.resx">
+      <DependentUpon>TabControlForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\DataSources\Worker.Result.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -108,8 +144,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
