@@ -33,6 +33,7 @@ namespace WinFormsDemo.MyTabControl
             TabNav = new MyTabNav(this);
             TabNav.Dock = DockStyle.Fill;
             this.SuspendLayout();
+            // tableLayoutPanel
             this.tableLayoutPanel.ColumnCount = 1;
             this.tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             this.tableLayoutPanel.Dock = DockStyle.Fill;
@@ -44,6 +45,11 @@ namespace WinFormsDemo.MyTabControl
             this.tableLayoutPanel.Controls.Add(TabPageBox, 0, 1);
             this.Controls.Add(this.tableLayoutPanel);
             this.ResumeLayout(false);
+        }
+
+        private void MyTabControl_Click(object sender, EventArgs e)
+        {
+            this.OnClick(EventArgs.Empty);
         }
 
         public void AddPage()

@@ -25,11 +25,25 @@ namespace WinFormsDemo
         {
             MyTabControl = new MyTabControl.MyTabControl();
             MyTabControl.Dock = DockStyle.Fill;
+            MyTabControl.Enabled = true;
             MyTabControl.Name = "MyTabControl";
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel1.Controls.Add(MyTabControl, 0, 0);
             this.tableLayoutPanel1.ResumeLayout(false);
             MyTabControl.Show();
+
+            MyTabControl.Click += MyTabControl_Click;
+            MyTabControl.MouseClick += MyTabControl_MouseClick;
+        }
+
+        private void MyTabControl_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void MyTabControl_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void button1_Click(object sender, EventArgs e)

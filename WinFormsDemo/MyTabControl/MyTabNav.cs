@@ -13,7 +13,8 @@ namespace WinFormsDemo.MyTabControl
         public MyTabControl TabControl { get; private set; } = null;
 
         #region control
-        private FlowLayoutPanel flowLayoutPanel = new FlowLayoutPanel();
+
+        private FlowLayoutPanel flowLayoutPanel;
 
         private List<MyTabNavItem> TabNavItems = new List<MyTabNavItem>();
         #endregion
@@ -27,6 +28,8 @@ namespace WinFormsDemo.MyTabControl
 
         private void InitializeComponent()
         {
+            this.flowLayoutPanel = new FlowLayoutPanel();
+            // flowLayoutPanel
             this.flowLayoutPanel.Dock = DockStyle.Fill;
             this.flowLayoutPanel.FlowDirection = FlowDirection.LeftToRight;
             this.flowLayoutPanel.HorizontalScroll.Visible = false;
@@ -37,12 +40,18 @@ namespace WinFormsDemo.MyTabControl
             this.ResumeLayout(false);
         }
 
+        private void MyTabNav_Click(object sender, EventArgs e)
+        {
+
+        }
+
         public void AddTabNavItem(MyTabNavItem item)
         {
             this.SuspendLayout();
             this.flowLayoutPanel.Controls.Add(item);
             this.ResumeLayout(false);
             this.TabNavItems.Add(item);
+            this.ActiveTabNavItem(item);
         }
 
         public void RemoveTabNavItem(MyTabNavItem item)
@@ -77,7 +86,10 @@ namespace WinFormsDemo.MyTabControl
                 return;
             }
 
-            old.IsActived = false;
+            if (old != null)
+            {
+                old.IsActived = false;
+            }
             item.IsActived = true;
         }
     }

@@ -54,8 +54,9 @@ namespace WinFormsDemo.MyTabControl
             this.TabControl = tabControl ?? throw new ArgumentNullException();
             this.TabPage = tabPage ?? throw new ArgumentNullException();
             InitializeComponent();
-            this.header = TabPage.Header;
+            this.Header = TabPage.Header;
             this.label1.Refresh();
+            this.flowLayoutPanel.Refresh();
         }
 
         private void InitializeComponent()
@@ -69,7 +70,7 @@ namespace WinFormsDemo.MyTabControl
             this.label1.Text = "载入中";
             // tabCloseButton
             this.tabCloseButton.Margin = new Padding(10, 2, 0, 2);
-            this.tabCloseButton.Size = new Size(8, 8);
+            this.tabCloseButton.Size = new Size(12, 12);
             this.tabCloseButton.Click += MyTabCloseButton_Click;
             // flowLayoutPanel
             this.flowLayoutPanel.Dock = DockStyle.Fill;
@@ -83,8 +84,8 @@ namespace WinFormsDemo.MyTabControl
             this.Font = new Font("微软雅黑", 12, GraphicsUnit.Pixel);
             this.BorderStyle = BorderStyle.None;
             this.Controls.Add(flowLayoutPanel);
-            this.Click += MyTabNavItem_Click;
             this.ResumeLayout(false);
+            this.Click += MyTabNavItem_Click;
         }
 
         private void MyTabNavItem_Click(object sender, EventArgs e)

@@ -19,9 +19,9 @@ namespace WinFormsDemo
             //注册消息过滤器
             Application.AddMessageFilter(new GlobalMessageFilter());
             Application.Run(new TabControlForm());
-            Application.Run(new ChartForm());
-            Application.Run(new MainForm());
-            Application.Run(new MainForm2());
+            //Application.Run(new ChartForm());
+            //Application.Run(new MainForm());
+            //Application.Run(new MainForm2());
         }
     }
 }
