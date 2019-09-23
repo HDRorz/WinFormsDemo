@@ -46,7 +46,7 @@ namespace WinFormsDemo
             chart1.ChartAreas.FirstOrDefault().AxisX.IsStartedFromZero = false;
             chart1.ChartAreas.FirstOrDefault().AxisX.Minimum = data.Min(item => item.Key);
             chart1.ChartAreas.FirstOrDefault().AxisX.Maximum = data.Max(item => item.Key);
-            //var x = chart1.ChartAreas.FirstOrDefault().Axes.FirstOrDefault(item => item.GetPosition(0) == 0);
+            var x = chart1.ChartAreas.FirstOrDefault().Axes.FirstOrDefault(item => item.GetPosition(0) == 0);
 
             //chart1.ChartAreas.FirstOrDefault().Axes.FirstOrDefault(item => item.Crossing == 0).LineWidth = 2;
             chart1.Invalidate();
